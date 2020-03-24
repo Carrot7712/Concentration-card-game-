@@ -1,0 +1,39 @@
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* flex: 
+flex-basis元件的基準值，可使用不同的單位值,控制 item在容器裡佔的寬度 
+flex-grow空間有剩時怎麼分配`,0是不要分配，有剩就讓兩側空白
+flex-shrink空間不夠時怎麼分配  */
+.card{
+    /* 作為display panel的子元件*/
+    flex:7% 0 1; /*100/13=7.7*/
+    height: 8vw;  /* 視窗大小的8% */
+    border: 2px solid #e0e0e0;
+    margin: 2px;
+    box-sizing: border-box;
+
+    /* 做為單一卡片的父元件 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card img{
+    max-width: 30%;
+    align-self: center; /*個別設定單一元件交錯軸的對齊*/
+}
+.card p{
+    margin: 3px;
+    font-size: 10px;
+}
+.card p:last-child{
+    transform: rotate(180deg);
+}
+.back{
+    background-image: url('https://i.imgur.com/X5nacsZ.png');
+    background-size: cover;
+}
+.paired{
+    background-color: #dae0e3;
+}
